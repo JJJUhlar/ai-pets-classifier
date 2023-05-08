@@ -1,6 +1,6 @@
 from fastai.vision.all import *
 from flask import Flask, jsonify, Response, request
-
+import math
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = './images/'
@@ -38,8 +38,10 @@ def predict():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             
             predictions = classify_image(f'./images/{filename}')
-            print(predictions)
-            # format predictions / sort by accuracy
+
+            for pet in predictions.keys():
+                predictions[pet] = format(Float(predictions[pet]), 'f')
+                
             return jsonify({
                 "predictions": predictions
             })

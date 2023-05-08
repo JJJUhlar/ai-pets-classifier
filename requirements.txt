@@ -1,9 +1,7 @@
 -f https://download.pytorch.org/whl/torch_stable.html
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==0.4
---find-links https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.1.6
-fastai==0.7
+torch==2.0.0+cpu 
+torchvision==0.15.1+cpu
+fastai==2.2.5
 flask
 pandas
 gunicorn

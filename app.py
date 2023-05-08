@@ -1,6 +1,5 @@
 from fastai.vision.all import *
 from flask import Flask, jsonify, Response, request
-import math
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = './images/'

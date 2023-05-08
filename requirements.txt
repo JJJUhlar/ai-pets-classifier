@@ -1,5 +1,5 @@
 -f https://download.pytorch.org/whl/torch_stable.html
-torch==1.13.0+cpu 
+torch==2.0.0+cpu 
 torchvision==0.15.1+cpu
 fastai==2.2.5
 flask

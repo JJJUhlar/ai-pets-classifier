@@ -2,7 +2,6 @@ from fastai.vision.all import load_learner, Learner
 from flask import Flask, jsonify, Response, request
 from werkzeug.utils import secure_filename
 import os
-from decimal import Float 
 
 UPLOAD_FOLDER = './images/'
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg'])
@@ -41,7 +40,7 @@ def predict():
             predictions = classify_image(f'./images/{filename}')
 
             for pet in predictions.keys():
-                predictions[pet] = format(Float(predictions[pet]), 'f')
+                predictions[pet] = format(float(predictions[pet]), 'f')
                 
             return jsonify({
                 "predictions": predictions

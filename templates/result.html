@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Classification Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <ol>
+        {% for pet, probability in predicted_class.items() %}
+            <li>{{ pet }}: {{ probability }}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

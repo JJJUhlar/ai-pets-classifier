@@ -1,7 +1,7 @@
 # AI Pet Classifier
 AI Pet classifier can distinguish between more than 30 different types of pet. Users can run AI Pet Classifier locally and recieve predicitions distinguishing between over 30 different pets!
 
-AI Pet Classifier is based on a ResNet18 model and trained further on the Oxford Pets III dataset.
+AI Pet Classifier is based on a ResNet18 model and trained further on the Oxford Pets III dataset. Libraries used during training include PyTorch, FastAI, Pandas, Numpy. Meanwhile, the server is implemented using Flask.
 
 The app is ready to use locally and also contains config files to be run via heroku if desired.
 

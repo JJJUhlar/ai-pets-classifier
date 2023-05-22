@@ -43,7 +43,7 @@ def predict():
                 predictions[pet] = format(float(predictions[pet]), 'f')
             
             sorted_predictions = sorted(predictions.items(), key=lambda x: float(x[1]), reverse=True)
-            sorted_predictions = {pet: format(float(prob), 'f') for pet, prob in sorted_predictions}
+            sorted_predictions = {pet: '{:.2%}'.format(float(prob)) for pet, prob in sorted_predictions}
 
             return render_template('result.html', predicted_class=sorted_predictions)
 
